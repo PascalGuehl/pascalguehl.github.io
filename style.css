@@ -34,7 +34,7 @@ header h1 {
 }
 header p {
   font-size: 1.1em;
-  color: #555;
+  color: #ccc;
 }
 
 /* Project table layout */
@@ -114,7 +114,7 @@ body.dark-mode a {
   color: #82b1ff;
 }
 body.dark-mode .description {
-  color: #ccc;
+  color: #888;
 }
 
 /* DARK MODE */
