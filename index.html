@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
   <title>Pascal Guehl – Research Projects</title>
   <style>
     body {
@@ -17,6 +19,7 @@
       margin-bottom: 0.5em;
     }
     .project-list {
+      font: bold;
       list-style: none;
       padding: 0;
     }
@@ -34,6 +37,14 @@
     .description {
       color: #555;
     }
+    .conference a {
+      font-size: 1em;
+      color:rgb(74, 109, 185);
+      text-decoration: none;
+    }
+    .conference a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -41,13 +52,13 @@
   <p>Welcome to my research homepage. Here are some of the projects I’ve worked on:</p>
 
   <ul class="project-list">
+   
     <li>
-      <a href="/egsr2020-pptbf-semiproctex/">EGSR 2020 – Semi-Procedural Texturing</a>
-      <div class="description">
-        Efficient Gaussian Filtering for Real-Time PPTBF Textures.
+      <div class="resource-links" style="padding-left: 16px; padding-right: 16px; padding-top: 6px;">
+        <a href="https://pascalguehl.github.io/siggraph2025-wave-noise/" target="_blank">
+          <i class="fa-solid fa-external-link"></i> Multi-Dimensional Procedural Wave Noise
+        </a>
       </div>
-    </li>
-    <li>
       <a href="/siggraph2025-wave-noise/">Multi-Dimensional Procedural Wave Noise</a>
       <div class="description">
         ACM Transactions on Graphics (TOG), Vol. 44, No. 4, Article XXX, August 2025
@@ -55,7 +66,28 @@
       <div class="description">
         SIGGRAPH 2025, August 2025, Vancouver, Canada
       </div>
+      <section class="teaser">
+        <img src="assets/images/tog_siggraph2025_wave_noise_teaser.jpg" style="border: 0px solid;width: 50%;" alt="Project Teaser">
+      </section>
     </li>
+
+     <li>
+      <a href="/egsr2020-pptbf-semiproctex/">Semi-Procedural Textures Using Point Process Texture Basis Functions</a>
+      <div class="description">
+        <a href="https://onlinelibrary.wiley.com/journal/14678659" target="_blank">Computer Graphics Forum (CGF)</a>, Volume 39, Issue 4, July 2020<br>      </div>
+      <div class="description">
+        <a href="https://egsr2020.london/" target="_blank">EGSR 2020</a>, June-July 2020, London, UK<br>
+      </div>
+      <section class="teaser">
+        <img src="assets/images/cgf_egsr2020_semiproctex_pptbf_teaser.jpg" style="border: 0px solid;width: 50%;" alt="Project Teaser">
+      </section>
+       <div class="conference">
+        <a href="https://onlinelibrary.wiley.com/journal/14678659" target="_blank">Computer Graphics Forum (CGF)</a>, Volume 39, Issue 4, July 2020<br>
+        <a href="https://egsr2020.london/" target="_blank">EGSR 2020</a>, June-July 2020, London, UK<br>
+       </div>
+      </div>
+    </li>
+
   </ul>
 </body>
 </html>
