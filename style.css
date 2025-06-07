@@ -129,7 +129,7 @@ body.dark-mode .container {
 
 body.dark-mode .project-row {
   background: #222; /* Card background in dark mode */
-  box-shadow: 0 4px 12px rgba(255,255,255,0.05);
+  box-shadow: none;
 }
 
 body.dark-mode .project-content h2,
