@@ -305,3 +305,52 @@ body.dark-mode .social-button.youtube {
 body.dark-mode .social-button.youtube:hover {
   background-color: #b30000;
 }
+
+body.dark-mode .social-button {
+  box-shadow: none; /* ou plus douce si tu veux */
+}
+
+/* .social-button i {
+  font-family: 'Font Awesome 6 Brands';
+  font-style: normal;
+  line-height: 1;
+  font-size: 1.2em;
+  display: inline-block;
+  vertical-align: middle;
+} */
+
+/* .social-button {
+  background: #0077b5;
+  color: white;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4em;
+  text-decoration: none;
+} */
+
+.social-button.linkedin {
+  background-color: #4a6db9; /* Ton bleu personnalisé */
+}
+.social-button.linkedin:hover {
+  background-color: #39569e; /* Variante plus foncée */
+}
+
+.social-button.youtube {
+  background-color: #b62525; /* Rouge plus sobre */
+}
+.social-button.youtube:hover {
+  background-color: #991111; /* Encore plus sombre au survol */
+}
+
+/* Ne pas hériter du style global des liens dans dark-mode */
+body.dark-mode .social-button {
+  color: white !important;
+}
+
+body.dark-mode .social-button:hover {
+  color: #fff;
+}
