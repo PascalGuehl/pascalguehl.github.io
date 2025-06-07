@@ -3,91 +3,105 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
   <title>Pascal Guehl – Research Projects</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
-    body {
-      font-family: sans-serif;
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 1rem;
-      line-height: 1.6;
+    .project-table {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
     }
-    h1 {
-      font-size: 2em;
-      margin-bottom: 0.5em;
+
+    .project-row {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      align-items: center; /* <-- changed this line */
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 20px;
     }
-    .project-list {
-      font: bold;
-      list-style: none;
-      padding: 0;
+
+    .project-image {
+      flex: 0 0 250px;
     }
-    .project-list li {
-      margin-bottom: 1.5em;
+
+    .project-image img {
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
-    .project-list a {
-      font-size: 1.2em;
-      text-decoration: none;
-      color: #1a0dab;
+
+    .project-content {
+      flex: 1;
     }
-    .project-list a:hover {
-      text-decoration: underline;
+
+    .project-content h2 {
+      margin-top: 0;
+      color:rgb(74, 109, 185);
     }
-    .description {
-      color: #555;
-    }
-    .conference a {
-      font-size: 1em;
+
+    .project-content a {
       color:rgb(74, 109, 185);
       text-decoration: none;
+      font-weight: bold;
     }
-    .conference a:hover {
+
+    .project-content a:hover {
       text-decoration: underline;
+    }
+
+    .description {
+      margin: 10px 0;
+      color: #444;
     }
   </style>
 </head>
-<body>
-  <h1>Pascal Guehl – Research Portfolio</h1>
-  <p>Welcome to my research homepage. Here are some of the projects I’ve worked on:</p>
+<body class="dark-mode">
+  <button onclick="document.body.classList.toggle('dark-mode')" style="position:fixed;top:10px;right:10px;">🌓</button>
+  <div class="container">
+    <header>
+      <h1>Pascal Guehl – Research Projects</h1>
+      <p>Welcome to my research homepage. Here are some of the projects I’ve worked on:</p>
+    </header>
 
-  <ul class="project-list">
-   
-    <li>
-      <div class="resource-links" style="padding-left: 16px; padding-right: 16px; padding-top: 6px;">
-        <a href="https://pascalguehl.github.io/siggraph2025-wave-noise/" target="_blank">
-          <i class="fa-solid fa-external-link"></i> Multi-Dimensional Procedural Wave Noise
-        </a>
-      </div>
-      <a href="/siggraph2025-wave-noise/">Multi-Dimensional Procedural Wave Noise</a>
-      <div class="description">
-        ACM Transactions on Graphics (TOG), Vol. 44, No. 4, Article XXX, August 2025
-      </div>
-      <div class="description">
-        SIGGRAPH 2025, August 2025, Vancouver, Canada
-      </div>
-      <section class="teaser">
-        <img src="assets/images/tog_siggraph2025_wave_noise_teaser.jpg" style="border: 0px solid;width: 50%;" alt="Project Teaser">
-      </section>
-    </li>
+    <div class="project-table">
 
-     <li>
-      <a href="/egsr2020-pptbf-semiproctex/">Semi-Procedural Textures Using Point Process Texture Basis Functions</a>
-      <div class="description">
-        <a href="https://onlinelibrary.wiley.com/journal/14678659" target="_blank">Computer Graphics Forum (CGF)</a>, Volume 39, Issue 4, July 2020<br>      </div>
-      <div class="description">
-        <a href="https://egsr2020.london/" target="_blank">EGSR 2020</a>, June-July 2020, London, UK<br>
+      <!-- SIGGRAPH 2025 Project -->
+      <div class="project-row">
+        <div class="project-image">
+          <img src="assets/images/tog_siggraph2025_wave_noise_teaser.jpg" alt="Wave Noise Teaser" />
+        </div>
+        <div class="project-content">
+          <h2><a href="https://pascalguehl.github.io/siggraph2025-wave-noise/" target="_blank">Multi-Dimensional Procedural Wave Noise</a></h2>
+          <div class="description">
+            <a href="https://dl.acm.org/journal/tog">ACM Transactions on Graphics (TOG)</a>, Vol. 44, No. 4, Article XXX, August 2025
+          </div>
+          <div class="description">
+            Presented at <a href="https://s2025.siggraph.org/" target="_blank">SIGGRAPH 2025</a>, Vancouver, Canada, August 2025
+          </div>
+        </div>
       </div>
-      <section class="teaser">
-        <img src="assets/images/cgf_egsr2020_semiproctex_pptbf_teaser.jpg" style="border: 0px solid;width: 50%;" alt="Project Teaser">
-      </section>
-       <div class="conference">
-        <a href="https://onlinelibrary.wiley.com/journal/14678659" target="_blank">Computer Graphics Forum (CGF)</a>, Volume 39, Issue 4, July 2020<br>
-        <a href="https://egsr2020.london/" target="_blank">EGSR 2020</a>, June-July 2020, London, UK<br>
-       </div>
-      </div>
-    </li>
 
-  </ul>
+      <!-- EGSR 2020 Project -->
+      <div class="project-row">
+        <div class="project-image">
+          <img src="assets/images/cgf_egsr2020_semiproctex_pptbf_teaser.jpg" alt="PPTBF Teaser" />
+        </div>
+        <div class="project-content">
+          <h2><a href="https://pascalguehl.github.io/egsr2020-pptbf-semiproctex/" target="_blank">Semi-Procedural Textures Using Point Process Texture Basis Functions</a></h2>
+          <div class="description">
+            <a href="https://onlinelibrary.wiley.com/journal/14678659" target="_blank">Computer Graphics Forum (CGF)</a>, Volume 39, Issue 4, July 2020
+          </div>
+          <div class="description">
+            Presented at <a href="https://egsr2020.london/" target="_blank">EGSR 2020</a>, London, UK, July 2020
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </body>
 </html>
